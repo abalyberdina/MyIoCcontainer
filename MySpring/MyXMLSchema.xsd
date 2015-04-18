@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" 
+		elementFormDefault="qualified" -->
+	<xs:element name="beans">
+        <xs:complexType>
+        <xs:sequence>
+			<xs:element name="bean" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name="constructor-arg" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="value" type="xs:string" />
+							<xs:attribute name="type" type="xs:string"  />
+							<xs:attribute name="ref" type="xs:string" />
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="name" type="xs:string"  use="required" />
+							<xs:attribute name="value" type="xs:string" />
+							<xs:attribute name="ref" type="xs:string" />
+						</xs:complexType>
+					</xs:element>
+					</xs:sequence>
+				<xs:attribute name="id" type="xs:string" />
+				<xs:attribute name="class" type="xs:string" />
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		
+    </xs:element>
+</xs:schema>

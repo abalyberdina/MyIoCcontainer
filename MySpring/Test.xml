@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="MyXMLSchema.xsd">
+	<bean>
+		<constructor-arg value="element" />
+		<constructor-arg type="java.lang.Integer" value="1" />
+		<property name="name" value="alehandrp" />
+	</bean>
+</beans>
